@@ -20,6 +20,9 @@ formInput.addEventListener('submit', e => {
   console.log(storageForm);
   localStorage.removeItem(`${STORAGE_KEY}`);
   formInput.reset();
+  for (key in storageForm) {
+    storageForm[key] = '';
+  }
 });
 
 function onTextAreaInput(e) {
