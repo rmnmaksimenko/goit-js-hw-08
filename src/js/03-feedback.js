@@ -20,7 +20,7 @@ form.addEventListener('submit', e => {
   console.log(storageForm);
   localStorage.removeItem(`${STORAGE_KEY}`);
   form.reset();
-  for (key in storageForm) {
+  for (const key in storageForm) {
     storageForm[key] = '';
   }
 });
